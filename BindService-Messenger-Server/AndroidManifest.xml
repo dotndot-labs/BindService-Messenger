@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dotndot.bindservice_messenger_server"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <service
+            android:name="com.dotndot.bindservice_messenger_server.RemoteService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.dotndot.bindservice.REMOTE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
